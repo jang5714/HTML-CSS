@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 폰트 사용하기</title>
+    <style>
+        @font-face {
+          font-family: 'trana'; /* 글꼴 */
+          src: local('trana'),
+              /*브라우저들이 지원하는 폰트만 선택해서 다운로드함 ex)크롬:woff파일만 다운로드*/
+              /*IE8 이하 버전을 지원하기 위한 eot 파일 먼저 선언*/
+              url('trana.eot'),
+              /*모던 브라우저 지원하기 위한 woff 파일 선언*/
+              url('trana.woff') format('woff'),
+              /*가장 용량이 큰 ttf파일 마지막에 선언*/
+              url('trana.ttf') format('truetype');
+         }
+        .w-font {
+          font-family:'trana', sans-serif; /* 웹 폰트 지정 */
+        }
+        p {
+          font-size:30px; /* 글자 크기 */
+        }
+      </style>
+</head>
+<body>
+    <p>Using Default Fonts</p>
+    <p class="w-font">Using Trana Fonts</p>
+</body>
+</html>
